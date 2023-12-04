@@ -1,0 +1,171 @@
+body{
+  background-color: #FFD099;
+}
+nav{
+  background-color: #2B3499;
+  padding: 10px;
+  height: 60px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  flex-wrap: wrap;
+
+}
+
+.navbar a{
+  text-decoration: none;
+
+}
+
+a{
+  border-radius: 4px;
+  font-size: 30px;
+  font-weight: 600;
+  transition: 2s;
+  padding: 8px 16px
+  
+}
+
+
+.active1{
+  color: #FF6C22;
+  position: relative;
+  flex-wrap: wrap;
+}
+a:hover{
+  text-shadow: -2px -2px 4px #fff;
+  cursor: pointer;
+
+}
+
+
+.active{
+  background-color: #2B3499;
+  min-height: 100px;
+  max-width: 30%;
+  border: 5px solid #fff;
+  padding-left: 20%;
+  padding-right: 20%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.active3{
+  padding-top: 0;
+  font-size: 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  float: none;
+  margin: 0;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.active2{
+  
+  display: flex;
+  position: relative;
+  justify-content: center;
+  max-height: 100px;
+  max-width: 175%;
+
+}
+
+.text{
+  display: flex;
+  box-sizing: border-box;
+  text-align: justify;
+  width: 100%;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+p{
+  color: #fff;
+}
+
+h2{
+  color: #fff;
+  width: 100%;
+}
+.type1{
+  background-color: #FF6C22;
+}
+
+input[type="submit"]{
+  width: 100%;
+  background-color: #FF6C22;
+  color: white;
+  padding: 15px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: #FF6C22;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+footer{
+  background-color: #fff ;
+  background-color: #2b34993a; 
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.foot{
+  color: #2B3499;
+}
+
+.foot::before{
+  content: url(/index/icons8-instagram-48.png);
+}
+
+.foot2::before{
+  content: url(/index/icons8-whatsapp-48.png);
+}
+
+.foot2{
+  color: #2B3499;
+}
+
+.responsive{
+  display: none;
+}
+
+i{
+  padding: 0 5px;
+}
+
+
+
+@media (max-width:600px){
+  .responsive{
+      display: block;
+      float: right;
+      padding: 12px;
+  }
+  a{
+      display: none;
+  }
+}
