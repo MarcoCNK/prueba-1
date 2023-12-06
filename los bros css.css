@@ -1,20 +1,43 @@
 body{
   background-color: #FFD099;
+  margin: 0;
+  display: grid;
+  place-items: center;
 }
-nav{
+
+body div:first-child{
+  justify-content: center;
+  align-items: center;
+}
+
+header{
   background-color: #2B3499;
   padding: 10px;
   height: 60px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 0;
+  display: grid; 
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-column: 1/ -1;
+  grid-row: 1/-1;
+
   border-radius: 4px;
   flex-wrap: wrap;
+  width: 100%;
+  z-index: 10;
 
 }
 
-.navbar a{
+.mierda{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas con el mismo ancho */
+    gap: 10px; /* Espaciado entre las columnas, ajusta según sea necesario */
+    justify-content: center; /* Centra los hijos horizontalmente */
+    align-items: center;
+}
+
+
+.mierda a{
   text-decoration: none;
 
 }
@@ -42,32 +65,57 @@ a:hover{
 
 
 .active{
-  background-color: #2B3499;
-  min-height: 100px;
-  max-width: 30%;
+  background-color: #2b34999d;
+  
   border: 5px solid #fff;
-  padding-left: 20%;
-  padding-right: 20%;
-  flex-wrap: wrap;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Aquí 3 es el número de columnas y 1fr indica que deben tener el mismo ancho */
+  gap: 10px;
+  /* grid-template-rows: repeat(3,minmax(100px,1fr)); */
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  min-height: 100vh;
+  grid-template-areas: 
+  " active3 active3 active3"
+  "email mail ."
+  "name nombre . "
+  "text text text"
+  " . boton . "
+
+  ;
   justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 20%;
-  margin-right: 20%;
+  text-align: center;
+  
 }
 
-.active3{
-  padding-top: 0;
-  font-size: 40px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  float: none;
-  margin: 0;
-  flex-wrap: wrap;
-  box-sizing: border-box;
+.active h2:first-child{
+  width: 100%;
+  grid-area: active3;
+}
+
+.active label{
+  width: 100%;
+  grid-area: name;
+}
+
+.active input:first-child{
+  grid-area: nombre;
+}
+
+.active label:nth-child(2){
+  grid-area: email;
+}
+
+.active input:nth-child(2){
+  grid-area: mail;
+}
+
+.active textarea{
+  width: 100%;
+  grid-area: text;
+}
+
+.active input:nth-child(3){
+  grid-area: boton;
 }
 
 .active2{
@@ -89,6 +137,18 @@ a:hover{
   flex-wrap: wrap;
 }
 
+.dotted:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 p{
   color: #fff;
 }
@@ -96,6 +156,7 @@ p{
 h2{
   color: #fff;
   width: 100%;
+  font-size: 40px;
 }
 .type1{
   background-color: #FF6C22;
@@ -168,4 +229,12 @@ i{
   a{
       display: none;
   }
+}
+
+.name{
+  height: 20px;
+}
+
+footer{
+  width: 100%;
 }
