@@ -41,7 +41,7 @@ header{
 
 }
 
-nav a{
+a{
   border-radius: 4px;
   font-size: 30px;
   font-weight: 600;
@@ -140,26 +140,13 @@ a:hover{
   cursor: pointer;
 }
 
-li{
-  color: #2B3499;
-  padding: 5px;
-  list-style: url(/index/favicon.ico.png);
 
-}
 
-.foot4{
-  color: #2B3499;
-  border-style: solid;
-  border-width: 1px ;
-  margin: 10px;
-}
 
-.foot3{
-  color: #2B3499;
-  border-style: solid;
-  border-width: 1px ;
-  margin: 10px;
-}
+
+
+
+
 
 p{
   color: #fff;
@@ -200,32 +187,11 @@ textarea{
 footer{
   background-color: #fff ;
   background-color: #2b34993a; 
-  min-width: 100%;
-  display:grid;
-  grid-template-columns: repeat( 3 , 1fr);
-  grid-template-areas: "content1 content2 content3";
   padding-top: 10px;
   padding-bottom: 10px;
-  justify-content: space-between;
-  text-align: center;
 
 }
 
-footer .content1{
-  grid-area: content1;
-}
-
-footer .content2{
-  grid-area: content2;
-}
-
-footer .content3{
-  grid-area: content3;
-}
-
-.foot3{
-  font-size: 15px;
-}
 
 .foot{
   color: #2B3499;
@@ -249,23 +215,6 @@ footer .content3{
 
 i{
   padding: 0 5px;
-}
-
-@media (max-width: 600px) {
-  .footer {
-    display: grid;
-    grid-template-columns: 1fr; 
-    grid-template-rows: repeat(3, 1fr);
-  }
-  .footer .content1{
-    grid-column: 1/ -1;
-  }
-  .footer .content2{
-    grid-column: 2/-5;
-  }
-  .foorer .content3{
-    grid-column: 3/-4;
-  }
 }
 
 
