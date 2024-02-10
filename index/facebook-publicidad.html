@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ver video = https://www.youtube.com/watch?v=PxHbtxRA9ZY  -->
+    </div>
+    
+     <!-- es por acá  -->
+     <div id="facebook-widget">
+        <!-- Espacio para mostrar la foto de perfil -->
+    </div>
+    
+    <script>
+        // Reemplaza con el ID numérico de tu página de Facebook
+        const pageId = '100007139551398';
+    
+        // Reemplaza con tu token de acceso de página
+        const accessToken = 'tu_token_de_acceso';
+    
+        // URL de la API de Graph para obtener información de la página
+        const graphApiUrl = `https://graph.facebook.com/v13.0/${pageId}?fields=picture&access_token=${accessToken}`;
+    
+        // Realizar la solicitud a la API de Graph
+        fetch(graphApiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Obtener la URL de la foto de perfil
+                const profilePictureUrl = data.picture.data.url;
+    
+                // Crear un elemento de imagen y agregarlo al widget
+                const imgElement = document.createElement('img');
+                imgElement.src = profilePictureUrl;
+    
+                // Añadir la imagen al div del widget
+                document.getElementById('facebook-widget').appendChild(imgElement);
+            })
+            .catch(error => {
+                console.error('Error al obtener la foto de perfil:', error);
+            });
+    </script>
+    
+    <div class="col-12 col-md-4">
+        <div class="row">
+            <p class="foot4">Acerca de nosotros</p>
+        </div>
+    
+        <div class="row claseAparte">
+            <div class="col-12 col-md-6 chiki">
+                <ul>
+                    <li>
+                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" media="(max-width:409px)">
+                        <img src="/assets/logoCDNI.png" style="width: auto; height: 5vw;" class="hidden-xs hidden-sm ps-creditcard" media="(min-width:410px)">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 chiki1">
+                <ul>
+                    <li>
+                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" media="(max-width:409px)">
+                        <img class="ps-creditcard" src="/assets/mercadoPago.png" style="width: auto; height: 5vw;" media="(min-width:410px)">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="row claseAparte chiki2">
+            <div class="col-12 col-md-6">
+                <ul>
+                    <li>
+                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" media="(max-width:409px)">
+                        <img src="/assets/visaNM.png" style="width: auto; height: 5vw;" class="hidden-xs hidden-sm ps-creditcard" media="(min-width:410px)">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 chiki">
+                <ul>
+                    <li>
+                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" media="(max-width:409px)">
+                        <img class="ps-creditcard" src="/assets/MC.png" style="width: auto; height: 5vw;" media="(min-width:410px)">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

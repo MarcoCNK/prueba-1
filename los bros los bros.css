@@ -287,3 +287,20 @@ i{
 footer{
   width: 100%;
 }
+
+.swc-menu__badges>li.half .ps-creditcard {
+    max-height: 45px;
+    width: 100%;
+
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+

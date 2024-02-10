@@ -66,3 +66,54 @@ footer{
 .foot2{
   color: #2B3499;
 }
+ /* ---------------------------- contenido imagen  ---------------------------- */
+/* body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita que la barra de desplazamiento aparezca si la imagen es más grande que la ventana del navegador 
+}
+
+.contenedor-imagen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imagen-deslizante {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; 
+  transition: opacity 1s, transform 1s; /* Transiciones para suavizar la aparición y el desplazamiento 
+}
+
+.contenedor-imagen:hover .imagen-deslizante {
+  opacity: 1; /* Al pasar el ratón sobre el contenedor, la imagen se vuelve visible 
+  transform: translate(-50%, -50%) translateY(-20px); /* Puedes ajustar la cantidad de desplazamiento vertical 
+} */
+
+ /* ---------------------------- contenido imagen  ---------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.contenedor-imagen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-deslizante {
+  opacity: 0;
+  transition: opacity 1s; /* Ajusta la duración de la animación según sea necesario */
+}
+
+.aparecer {
+  opacity: 1;
+}
